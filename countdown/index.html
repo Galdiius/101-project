@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+    <title>Countdown</title>
+</head>
+<body>
+    <div class="app">
+        <h1>COUNTDOWN</h1>
+        <div class="form" >
+            <span>Set time</span><br>
+            <input type="date" id="date">
+            <input type="time" id="time" value="00:00">
+            <button type="button" id="btn">Count</button>
+        </div>
+        <div class="countdown">
+            <div class="day container">
+                <h3 class="days">00</h3>
+                <span>Days </span>
+            </div>
+            <div class="day container" style="margin-left: 50px;">
+                <h3 class="hours">00</h3>
+                <span>Hours</span>
+            </div>
+            <div class="day container" style="margin-left: 50px;">
+                <h3 class="minutes">00</h3>
+                <span>Minute</span>
+            </div>
+            <div class="day container" style="margin-left: 50px;">
+                <h3 class="seconds">00</h3>
+                <span>Second</span>
+            </div>
+        </div>
+        <div>
+            <img src="./img/undraw_Loading_re_5axr.svg" alt="">
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

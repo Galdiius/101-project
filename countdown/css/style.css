@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #3498db;
+    color: white;
+}
+.title{
+    font-weight: bold;
+}
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.countdown{
+    min-height: 10px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.days,.hours,.minutes,.seconds{
+    font-size: 4rem;
+}
+.container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+}
+span{
+    font-size: 20px;
+}
+.form{
+    text-align: center;
+}
+#date,#time{
+    background: none;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+}
+#btn{
+    padding: 8px;
+    border: none;
+    background-color: #2ecc71;
+    color: white;
+    border-radius: 5px;
+}
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
