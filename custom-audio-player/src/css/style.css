@@ -20,7 +20,7 @@ body{
     display: flex;
     justify-content: space-between;
 }
-/* input[type=range] {
+input[type=range] {
     -webkit-appearance: none; 
     background: transparent;
 }
@@ -36,8 +36,8 @@ cursor: pointer;
 background: transparent; 
 border-color: transparent;
 color: transparent;
-} */
-/* input[type=range]::-webkit-slider-thumb {
+}
+input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     border: 1px solid #000000;
     height: 15px;
@@ -74,4 +74,4 @@ input[type=range]::-webkit-slider-runnable-track {
     background: #5f27cd;
     border-radius: 1.3px;
     border: 0.2px solid #010101;
-} */
+}
