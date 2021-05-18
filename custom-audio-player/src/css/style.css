@@ -1,13 +1,13 @@
 body{
-    overflow: hidden;
+    overflow: auto;
 }
-.wrap{
+/* .wrap{
     position: absolute;
     left: 30%;
     top: 30%;
-}
-#player{
-    width: 400px;
+} */
+.box-wrap{
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     box-shadow: 10px 10px 10px 10px;
