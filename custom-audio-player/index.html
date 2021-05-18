@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1080">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <meta name="viewport" content="width=1080"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./src/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <title>Music player</title>
 </head>
 <body style="background: #2c3e50;">
-    <span></span>
-    <div class="row wrap">
-        <div class="col-6 my-auto mx-auto">
-            <div id="player">
-                <img src="https://i.postimg.cc/Qt7VfZJv/artwork-440x440.jpg" width="400" alt="">
+    <div class="container-fluid">
+        <span></span>
+        <div class="row d-flex justify-content-center my-4">
+            <div id="player" class="box-wrap col-10 col-md-6">
+                <img src="https://i.postimg.cc/Qt7VfZJv/artwork-440x440.jpg" style="width: 100%;" alt="">
                 <div class="header">
                     <audio src="assets/Unknown Brain - Say Goodbye (ft. Marvin Divine) [NCS Release].mp3" id="music_player" onchange="i()"></audio>
-                    <input type="range" id="duration" onclick="go()" min="0" max="230" disabled width="100%">
+                    <input type="range" id="duration" onchange="go()" onclick="go()" min="0" max="230" width="100%">
                 </div>
                 <div class="control">
-                    <button class="btn" id="play" onclick="play()" style="display:block">
+                    <button class="btn play" onclick="play()" style="display:block">
                         <i class="fas fa-play" style="color:white;"></i>
                     </button>
-                    <button class="btn" id="pause" onclick="pause()" style="display: none;">
+                    <button class="btn pause" onclick="pause()" style="display: none;">
                         <i class="fas fa-pause" style="color:white;"></i>
                     </button>
                     <button class="btn" id="stop" onclick="stop()">
@@ -37,11 +37,61 @@
                 </div>
             </div>
         </div>
+        <div class="row d-flex justify-content-center my-4">
+            <div id="lirik" class="box-wrap col-10 col-md-6">
+                <div class="card bg-transparent border-0 text-light">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="my-auto">
+                                <span class="my-auto">Tambahkan baris lirik</span>
+                            </div>
+                            <button class="btn btn-netral text-light" type="button" onclick="addlirik()"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <button class="btn btn-secondary" type="button" onclick="simpan()">Preview</button>
+                        <div class="control">
+                            <button class="btn play" onclick="play()" style="display:block">
+                                <i class="fas fa-play" style="color:white;"></i>
+                            </button>
+                            <button class="btn pause" onclick="pause()" style="display: none;">
+                                <i class="fas fa-pause" style="color:white;"></i>
+                            </button>
+                            <button class="btn" id="stop" onclick="stop()">
+                                <i class="fas fa-stop" style="color:white;"></i>
+                            </button>
+                            <button class="btn" onclick="addlirik()">
+                                <i class="fas fa-plus text-light"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: none !important;" class="row d-flex justify-content-center my-4"  id="preview-div">
+            <div class="box-wrap col-10 col-md-6">
+                <div class="card bg-transparent border-0 text-light">
+                    <div class="card-header">
+                        <span class="my-auto">Preview Lirik</span>
+                    </div>
+                    <div class="card-body" id="preview-lirik">
+                        
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-secondary text-light" type="button" onclick="download_lirik()">Downlod Lirik</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
     <script src="./src/js/player.js"></script>
     <script src="./src/fontawesome/js/all.min.js"></script>
-    
+    <script type="text/javascript" src="js/YConsole-compiled.js"></script>
+    <script type="text/javascript" >YConsole.show();</script>
 </body>
 </html>
