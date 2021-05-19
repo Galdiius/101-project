@@ -1,6 +1,3 @@
-let api_key ="AIzaSyAj4A6rtB25PqPnCTWOrYUxplp0JSPW73s"
-
-
 let btnConvert = document.getElementById('convert')
 let inputLink = document.getElementById('inputLink')
 let info  = document.getElementById('info')
