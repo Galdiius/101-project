@@ -10,7 +10,6 @@ let tidakValid = document.getElementById('tidakvalid')
 btnConvert.addEventListener('click',function(){
     let id = YouTubeGetID(inputLink.value)
     valid.style.display = 'block'
-    tidakValid.style.display = 'none'
     valid.setAttribute('src',`https://www.yt-download.org/api/widget/mp3/${id}`)
 })
 
